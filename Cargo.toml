@@ -1,0 +1,15 @@
+[package]
+name = "RemoteDesk"
+version = "0.1.0"
+edition = "2021"
+description = "Remote Desktop"
+rust-version = "1.71.0"
+
+[features]
+hwcodec = ["scrap/hwcodec"]
+vram = ["scrap/vram"]
+mediacodec = ["scrap/mediacodec"]
+
+[dependencies]
+scrap = { path = "libs/scrap", features = ["wayland"] }
+sciter-rs = { git = "https://github.com/open-trade/rust-sciter", branch = "dyn" }
